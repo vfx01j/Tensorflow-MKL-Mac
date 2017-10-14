@@ -115,9 +115,10 @@ https://storage.googleapis.com/tensorflow/mac/cpu/protobuf-3.1.0-cp35-none-macos
 
 To check if the Tensorflow is running properly, try the followings:
 
+`$ python`
+
 ```python
-$ python
->>> import tensorflow as tf`
+>>> import tensorflow as tf
 >>>
 ```
 
