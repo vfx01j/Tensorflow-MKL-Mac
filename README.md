@@ -20,7 +20,7 @@ Installed MKL to /opt/intel/mklml
 
 `$ mv  mklml_mac_2018.0.20170908 /opt/intel/mklml`
 
-Symlink the two .dylib files (lib/libmklml.dylib, lib/libiomp5.dylib) to /usr/local/lib
+Symlink the two .dylib files (**lib/libmklml.dylib, lib/libiomp5.dylib**) to /usr/local/lib
 
 `$ ln -sf /opt/intel/mklml/lib/libmklml.dylib /usr/local/lib/libmklml.dylib`
 
@@ -32,35 +32,40 @@ Remember to assign proper file ownership of the .dylib links in order to avoid e
 
 `$ chown $(whoami):staff /usr/local/lib/libiomp5.dylib`
 
-Assign correct 'install name' to the two .dylib symlinks in order to avoid any compiling error:
+Assign correct **'install name'** to the two .dylib symlinks in order to avoid any compiling error:
 
 `$ install_name_tool -id "/opt/intel/mklml/lib/libmklml.dylib" /usr/local/lib/libmklml.dylib`
 
 `$ install_name_tool -id "/opt/intel/mklml/lib/libiomp5.dylib" /usr/local/lib/libiomp5 .dylib`
 
-Download and extract Tensorflow
+Download and extract Tensorflow:
 
 `$ wget https://github.com/tensorflow/tensorflow/archive/v1.3.1.tar.gz`
 
 `$ tar -xzvf v1.3.1.tar.gz`
 
+Supposing new folder **tensorflow-1.3.1** has been extracted:
+
 `$ cd tensorflow-1.3.1`
 
-Key changes to configure file:
-* Change MKL_ML_LIB_PATH to lib/libmklml.dylib
-* Change MKL_ML_OMP_LIB_PATH to lib/libiomp5.dylib
+Key changes to edit the file **tensorflow-1.3.1/configure**:
+* Change **MKL_ML_LIB_PATH** to **lib/libmklml.dylib**
+* Change **MKL_ML_OMP_LIB_PATH** to **lib/libiomp5.dylib**
 * Comment out the parts that say "if linux:"
 * Comment out the parts that say "Darwin is not supported" and "exit" clause
-* Comment out the parts that deal with libdl.so.2
+* Comment out the parts that deal with **libdl.so.2**
 
-Changes to third_party/mkl/BUILD:
+Changes to **tensorflow-1.3.1/third_party/mkl/BUILD**:
 Change the list of three .so files to the two .dylib files
 
-When configuring: 
-Type Yes to use MKL, No to download. 
+Start configuring the source: 
+
+`$ ./configure`
+
+Type **Yes** to **use MKL**, **No** to **download MKL**. 
 MKL installed separately. Path to MKL: /opt/intel/mklml
 
-Apple builtin LLVM (clang) doesn't support compiler option like "-fopenmp" so let's skip checking it by modifying tensorflow/tensorflow.bzl:
+Apple builtin LLVM (clang) doesn't support compiler option like **"-fopenmp"** so let's skip checking it by modifying tensorflow/tensorflow.bzl:
 
 1. Find the line:
 
@@ -91,6 +96,9 @@ Finally, use pip to install the wheel:
 `$ pip install --ignore-installed --upgrade /tmp/tensorflow_pkg/tensorflow-1.3.1-cp27-cp27m-macosx_10_12_intel.whl`
 
 After the installation, let's have a fast (10x-50x) implementation of protobuf to boost the performance:
+
+(*This is also the solution to **KeyError: "Couldn't find enum google.protobuf.MethodOptions.IdempotencyLevel"** while running command like "import tensorflow" within python)
+
 For Python 2.7:
 
 `pip install --upgrade \
@@ -100,5 +108,18 @@ For Python 3.n:
 
 `$ pip3 install --upgrade \
 https://storage.googleapis.com/tensorflow/mac/cpu/protobuf-3.1.0-cp35-none-macosx_10_11_x86_64.whl`
+
+To check if the Tensorflow is running properly, try the followings:
+
+`$ python`
+
+`>>> import tensorflow as tf`
+
+`>>>'
+
+If no error message appears, then Tensorflow is imported successfully in Python.
+
+**Time to start your spiritual work in Deep Learning!**
+
 
 
