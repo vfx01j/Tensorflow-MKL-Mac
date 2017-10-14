@@ -1,14 +1,20 @@
 # Tensorflow-MKL-Mac
 
-Tensorflow (Intel MKL build) for Mac
+Tensorflow (Intel MKL-DNN 2018) for Mac
+====================================
 
 Intel Math Kernel Library (MKL) for Intel based systems accelerate math processing routines, increase application performance, and reduce development time. This ready-to-use math library includes:
 
 Linear Algebra | Fast Fourier Transforms (FFT) | Deep Neural Networks | Vector Statistics & Data Fitting | Vector Math & Miscellaneous Solvers
 
-This is my first successful build of Tensorflow which has integrated with MKL-DNN 2018 Initial Release.
+This is my first successful build of Tensorflow which has integrated with MKL-DNN 2018 Initial Release. You can download the compiled pip wheel file **(.whl)** through **Release** section. This build has enabled AVX, SSE4 features on Intel CPU.
 
-##Here's the build instruction:
+*Please remind that this build is **NOT** for **CUDA GPU**. The intention to utilize **Intel MKL** is to accelerate **Intel Core i5 (Haswell) or above CPU (not GPU)** on Mac computer which has well-known limit of OpenCL support on its integrated Graphic processor (not even has **SYCL/ComputeCPP** support for Mac at the moment).*
+
+For OpenCL 1.2 support release of Tensorflow, please see https://github.com/hughperkins/tf-coriander.
+
+**Here's the build instruction:**
+---------------------------------
 
 System: Mac OS X 10.12.6
 
