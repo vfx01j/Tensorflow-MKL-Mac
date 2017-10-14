@@ -1,6 +1,6 @@
 # Tensorflow-MKL-Mac
 
-![alt text(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRlczb-xcr8RzaQPfk-vaCy07MD-cl_i_sCyX9QCXGyYkyQ-1-qcroQ5gZR "Tensorflow")
+![alt text(https://lh3.googleusercontent.com/N_Nk4NMg4L3_1o8bj1eZR53rigiJXXkt34APyPBqb_gU3WmpCCyG5ArT69qkC80wNtuSHyUImM6R5fVpm_jWjSORekbJJkA=s688 "Tensorflow")
 
 
 
