@@ -7,7 +7,7 @@ Intel Math Kernel Library (MKL) for Intel based systems accelerate math processi
 
 Linear Algebra | Fast Fourier Transforms (FFT) | Deep Neural Networks | Vector Statistics & Data Fitting | Vector Math & Miscellaneous Solvers
 
-This is my first successful build of Tensorflow which has integrated with MKL-DNN 2018 Initial Release. You can download the compiled pip wheel file **(.whl)** through **Release** section. This build has enabled AVX, SSE4 features on Intel CPU.
+This is my first successful build of Tensorflow which has integrated with MKL-DNN 2018 Initial Release. You can download the compiled pip wheel file **(.whl)** through **Release** section. This build has enabled support of AVX, SSE4 features on Intel CPU for better performance.
 
 *Please remind that this build is **NOT** for **CUDA GPU**. The intention to utilize **Intel MKL** is to accelerate **Intel Core i5 (Haswell) or above CPU (not GPU)** on Mac computer which has well-known limit of OpenCL support on its integrated Graphic processor (not even has **SYCL/ComputeCPP** support for Mac at the moment).*
 
