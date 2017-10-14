@@ -1,9 +1,5 @@
 # Tensorflow-MKL-Mac
 
-![alt text(https://lh3.googleusercontent.com/N_Nk4NMg4L3_1o8bj1eZR53rigiJXXkt34APyPBqb_gU3WmpCCyG5ArT69qkC80wNtuSHyUImM6R5fVpm_jWjSORekbJJkA=s688 "Tensorflow")
-
-
-
 Tensorflow (Intel MKL build) for Mac
 
 Intel Math Kernel Library (MKL) for Intel based systems accelerate math processing routines, increase application performance, and reduce development time. This ready-to-use math library includes:
@@ -12,7 +8,7 @@ Linear Algebra | Fast Fourier Transforms (FFT) | Deep Neural Networks | Vector S
 
 This is my first successful build of Tensorflow which runs against MKL-DNN 2018 Initial Release.
 
-Here's the build instruction:
+##Here's the build instruction:
 
 System: Mac OS X 10.12.6
 
