@@ -1,4 +1,9 @@
 # Tensorflow-MKL-Mac
+
+![alt text(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRlczb-xcr8RzaQPfk-vaCy07MD-cl_i_sCyX9QCXGyYkyQ-1-qcroQ5gZR "Tensorflow")
+
+
+
 Tensorflow (Intel MKL build) for Mac
 
 Intel Math Kernel Library (MKL) for Intel based systems accelerate math processing routines, increase application performance, and reduce development time. This ready-to-use math library includes:
@@ -10,8 +15,11 @@ This is my first successful build of Tensorflow which runs against MKL-DNN 2018 
 Here's the build instruction:
 
 System: Mac OS X 10.12.6
+
 Intel MKL-DNN library: mklml_mac_2018.0.20170908.tgz (from https://github.com/01org/mkl-dnn/releases)
+
 Tensorflow release: 1.3.1 (https://github.com/tensorflow/tensorflow/releases)
+
 Bazel release: 0.5.4 (https://github.com/bazelbuild/bazel/releases)
 
 Installed MKL to /opt/intel/mklml
@@ -111,11 +119,11 @@ https://storage.googleapis.com/tensorflow/mac/cpu/protobuf-3.1.0-cp35-none-macos
 
 To check if the Tensorflow is running properly, try the followings:
 
-`$ python`
-
-`>>> import tensorflow as tf`
-
-`>>>'
+```python
+$ python
+>>> import tensorflow as tf`
+>>>
+```
 
 If no error message appears, then Tensorflow is imported successfully in Python.
 
