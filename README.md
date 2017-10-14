@@ -6,7 +6,7 @@ Intel Math Kernel Library (MKL) for Intel based systems accelerate math processi
 
 Linear Algebra | Fast Fourier Transforms (FFT) | Deep Neural Networks | Vector Statistics & Data Fitting | Vector Math & Miscellaneous Solvers
 
-This is my first successful build of Tensorflow which runs against MKL-DNN 2018 Initial Release.
+This is my first successful build of Tensorflow which has integrated with MKL-DNN 2018 Initial Release.
 
 ##Here's the build instruction:
 
