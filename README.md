@@ -14,6 +14,8 @@ This is my first successful build of Tensorflow which has integrated with MKL-DN
 
 For OpenCL 1.2 support release of Tensorflow, please see https://github.com/hughperkins/tf-coriander.
 
+*Please remind that this is just a guideline and you might want to extend it a bit further with the latest version of Tensorflow framework. Let us know if you have any success on it.
+
 **Here's the build instruction:**
 ---------------------------------
 
